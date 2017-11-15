@@ -1,0 +1,172 @@
+V "GNAT Lib v5"
+P SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IO
+RV SPARK_05
+
+U components%b		components.adb		dc9ebf1b NE OO PK GE IL
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+U components%s		components.ads		3fc6d7ad BN EE NE OO PK GE IL
+
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-charac.ads		20070912115821 2d3ec45b ada.characters%s
+D a-chlat1.ads		20140225151544 66457d31 ada.characters.latin_1%s
+D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
+D a-finali.ads		20140611123707 69f99942 ada.finalization%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-string.ads		20070406091342 90ac6797 ada.strings%s
+D a-strmap.ads		20140611123156 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20140717072738 3f91d4c5 ada.strings.unbounded%s
+D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D components.ads	20171115121202 3fc6d7ad components%s
+D components.adb	20171115121200 74082e30 components%b
+D interfac.ads		20141120112812 6033a23f interfaces%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
+D system.ads		20141031112219 1d274481 system%s
+D s-atocou.ads		20141017084241 cd7c94ca system.atomic_counters%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
+D s-finmas.ads		20140225151139 814daec4 system.finalization_masters%s
+D s-finroo.ads		20120426095924 4ff27390 system.finalization_root%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-secsta.ads		20140225151139 86a2856d system.secondary_stack%s
+D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20131010103753 b16154c2 system.storage_pools%s
+D s-stposu.ads		20140718101241 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20131014135145 aedef97e system.stream_attributes%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 15|1r8 1r25 2r8 2r35 3r8 3r25
+X 8 a-string.ads
+16K13*Strings 35e16 15|1w12 1r29 2r12 2r39
+X 10 a-strunb.ads
+76K21*Unbounded 489e26 15|2w20 2r47
+X 12 a-textio.ads
+49K13*Text_IO 471e16 15|3w12 3r29
+263U14*Put_Line 15|82s9 183s9
+264a7 Item{string} 15|82r18
+X 14 components.ads
+2k9*components 82E8 109l5 109e15 15|4b16 191l7 191t17
+8X3*value_not_possible
+14i3*NUM_CORPORAL{integer} 20r66 22r66 15|14r19 15r65 20r35 21r33 22r63 23r62
+. 31r35 42r35
+15i3*NUM_SERGEANT{integer} 20r53 22r53 15|21r48 23r77 31r50 42r50
+16i3*NUM_LIEUTENANT{integer} 19r67 21r61 15|32r50 42r65
+17i3*NUM_MAJOR{integer} 19r57 21r51 15|43r50
+18i3*NUM_GENERAL{integer} 19r45 21r39
+19i3*NUM_PIECES_PER_TEAM{integer} 15|12r35 15r19 22r41 23r40 33r41 34r40
+. 44r41 45r40 147r31
+21i3*TOTAL_PIECES{integer} 30r41
+30I11*pieces_id{integer} 58r70 61r52 65r50 88r30 88r49 97r56 15|93r29 107r27
+. 130r68 137r54 145r52 147r10 172r23
+34E8*piece_type 34e37 84r12 15|56r59 62r53 79r14
+34n23*c{34E8} 15|65r16
+34n26*s{34E8} 15|67r16
+34n29*l{34E8} 15|69r16
+34n32*m{34E8} 15|71r16
+34n35*g{34E8} 15|73r16
+36E8*color_type 36e36 65r68 15|145r70
+36n23*black{36E8} 15|150r16
+36n30*white{36E8} 15|148r16
+37E8*territory_type 37e48 69r66 15|156r64
+37n27*black{37E8} 15|161r16
+37n34*white{37E8} 15|163r16
+37n41*trench{37E8} 15|165r16
+44E11*x_index{character} 57r57 61r70 68r53 72r54 97r35 15|91r16 106r16 129r59
+. 137r72 155r55 159r33 170r56 186r16
+45I11*y_index{integer} 57r73 62r72 68r69 72r70 97r44 15|92r20 102r56 129r75
+. 138r68 155r71 159r14 170r72 180r16
+47R8*components 54r28 57r38 61r32 65r30 68r34 72r35 75r33 103c8 107e13 15|102r37
+. 122r30 129r40 137r34 145r32 155r36 170r37 176r35
+54U13*empty 54<20 15|122b15 126l9 126t14
+54r20 c{47R8} 15|122b22 124m19 124r19 125m18 125r18
+57V12*get_id_from_board{30I11} 57>31 57>50 57>66 15|129b14 133l9 133t26
+57r31 c{47R8} 15|129b33 132r14
+57e50 x{44E11} 15|129b52 132r22
+57i66 y{45I11} 15|129b68 132r24
+61U13*put_piece 61<24 61>44 61>63 62>65 15|137b15 141l9 141t18
+61r24 c{47R8} 15|137b26 140m7
+61i44 id{30I11} 15|137b46 140r23
+61e63 x{44E11} 15|137b65 140r15
+62i65 y{45I11} 15|138b61 140r17
+65V12*get_color{36E8} 65>23 65>42 15|145b14 152l9 152t18
+65r23 c{47R8} 15|145b25
+65i42 id{30I11} 15|145b44 147r24
+68V12*get_territory{37E8} 68>27 68>46 68>62 15|155b14 167l9 167t22
+68r27 c{47R8} 15|155b29
+68e46 x{44E11} 15|155b48 159r45
+68i62 y{45I11} 15|155b64 159r26
+72U13*remove_piece 72<27 72>47 72>63 15|170b15 173l9 173t21
+72r27 c{47R8} 15|170b29 172m7
+72e47 x{44E11} 15|170b49 172r15
+72i63 y{45I11} 15|170b65 172r17
+75U13*print_board 75>26 15|176b15 189l9 189t20
+75r26 c{47R8} 15|176b28 182r38
+82R8 piece 85e13 91r54 15|56r42
+84e5 rank{34E8} 15|58m16
+88I11 index_of_pieces{30I11} 91r34 15|81r20 82r26 83r32
+91A8 array_of_pieces(82R8)<integer> 105r14 15|78r38
+97A8 chess_board_type(30I11)<character><integer> 106r13 15|89r38
+105a5 pieces{91A8} 15|124m21
+106a5 board{97A8} 15|107r14 111r36 125m20 132r16 140m9 172m9
+X 15 components.adb
+11V14 is_corporal{boolean} 11b14 11>26 16l9 16t20 64s10
+11i26 i{integer} 14r14 15r15 15r43
+12i7 previous_range{integer} 15r48
+19V14 is_sergeant{boolean} 19b14 19>26 27l9 27t20 66s13
+19i26 i{integer} 25r15 25r38 26r15 26r44
+20i7 previous_coute{integer} 25r19
+21i7 actual_cuote{integer} 25r42
+22i7 second_previus_cuote{integer} 26r19
+23i7 second_actual_cuote{integer} 26r49
+30V14 is_lieutenant{boolean} 30b14 30>29 38l9 38t22 68s13
+30i29 i{integer} 36r15 36r38 37r15 37r44
+31i7 previous_coute{integer} 32r33 33r63 36r19
+32i7 actual_cuote{integer} 34r62 36r42
+33i7 second_previus_cuote{integer} 37r19
+34i7 second_actual_cuote{integer} 37r49
+41V14 is_major{boolean} 41b14 41>24 49l9 49t17 70s13
+41i24 i{integer} 47r15 47r38 48r15 48r44
+42i7 previous_coute{integer} 43r33 44r63 47r19
+43i7 actual_cuote{integer} 45r62 47r42
+44i7 second_previus_cuote{integer} 48r19
+45i7 second_actual_cuote{integer} 48r49
+56U15 init_piece 56b15 56<27 56>49 59l9 59t19 84s9
+56r27 my_piece{14|82R8} 58m7
+56e49 rank{14|34E8} 58r24
+62V14 calculate_rank{14|34E8} 62b14 62>30 75l9 75t23 83s17
+62i30 i{integer} 64r22 66r25 68r27 70r22
+78U15 init_pieces 78b15 78<28 86l9 86t20 124s7
+78a28 set{14|91A8} 84m20 84r20
+79e7 rank{14|34E8} 83m9 84r31
+81i11 index{14|88I11} 82r48 83r52 84r24
+89U15 init_board 89b15 89<26 96l9 96t19 125s7
+89a26 board{14|97A8} 93m15
+91e11 x{14|44E11} 93r21
+92i15 y{14|45I11} 93r23
+102V14 prepare_string{string} 102b14 102>30 102>49 115l9 115t23 182s23
+102r30 c{14|47R8} 107r12 111r34
+102i49 y{14|45I11} 105r26 107r22 111r44
+103a7 s{string} 105m7 108m11 108r16 111m11 111r16 114r14
+106e11 x{14|44E11} 107r20 111r42
+157i7 aux{integer} 159m7 160r10 162r13
+177a7 board_line{string} 182m9 183r18
+178a7 x_help_line{string} 187m11 187r26
+180i11 y{14|45I11} 182r40
+186e11 x{14|44E11} 187r46
+
