@@ -1,4 +1,10 @@
-generic
+--generic
+with ada.strings; use ada.strings;
+with ada.strings.unbounded; use ada.strings.unbounded;
+with ada.text_io; use ada.text_io;
+with ada.integer_text_io; use ada.integer_text_io;
+with ada.characters.handling; use ada.characters.handling;
+with exceptions; use exceptions;
 package dcomponents is
 
   -----------------------------------------------------------------------------
@@ -20,6 +26,8 @@ package dcomponents is
                                                     NUM_SERGEANT+NUM_CORPORAL;
   TOTAL_PIECES : constant integer := (NUM_GENERAL+NUM_MAJOR+NUM_LIEUTENANT+
                                                     NUM_SERGEANT+NUM_CORPORAL)*2;
+  FIRST_WHITE_PIECE : constant integer := 1;
+  FIRST_BLACK_PIECE : constant integer := NUM_PIECES_PER_TEAM+1;
 
 
   -----------------------------------------------------------------------------
@@ -31,7 +39,7 @@ package dcomponents is
 
   -- Military ranks sorted in an increasing way
   -- corporal, sergeant, lieutenant, major, general
-  type piece_type is (c, s, l, m, g);
+--  type piece_type is ('c', 's', 'l','m', 'g');
 
   type color_type is (black, white);
   type territory_type is (black, white, trench);
@@ -45,6 +53,7 @@ package dcomponents is
   subtype y_index is integer range 1..8;
 
   type components is limited private;
+
 
   -----------------------------------------------------------------------------
   --             PROCEDURES AND FUNCTIONS FOR COMPONENTS                     --
@@ -62,11 +71,18 @@ package dcomponents is
                                                                 y : in y_index);
 
   -- Get the color based on the id of the piece
-  function get_color (c : in components; id : in pieces_id) return color_type;
+  function get_color (id : in pieces_id) return color_type;
 
   -- Return the type of the territory based on an box
   function get_territory (c : in components; x : in x_index; y : in y_index)
                                                           return territory_type;
+
+  -- Return the character representation for an id
+  function calculate_rank (id : in integer) return character;
+
+  -- Return a boolean depending on the state of the box
+  function box_empty (c : in components; x : in x_index; y : in y_index)
+                                                                  return boolean;
 
   -- Remove a piece from a box
   procedure remove_piece (c : out components; x : in x_index; y : in y_index);
@@ -79,16 +95,16 @@ private
   --              PIECE RECORD AND TYPE FOR ARRAY OF PIECES                  --
   -----------------------------------------------------------------------------
 
-  type piece is
-    record
-    rank : piece_type;
-  end record;
+  --type piece is
+  --  record
+  --  rank : piece_type;
+  --end record;
 
   -- Index for array
   subtype index_of_pieces is pieces_id range 1..pieces_id'last;
 
   -- Array of pieces
-  type array_of_pieces is array (index_of_pieces) of piece;
+  type array_of_pieces is array (index_of_pieces) of character;
 
   -----------------------------------------------------------------------------
   --              TYPES RELATED TO BOARD AND BOARD RECORD                    --

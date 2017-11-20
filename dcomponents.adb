@@ -1,7 +1,4 @@
-  with ada.strings; use ada.strings;
-  with ada.strings.unbounded; use ada.strings.unbounded;
-  with ada.text_io; use ada.text_io;
-  with ada.integer_text_io; use ada.integer_text_io;
+
   package body dcomponents is
 
     ---------------------------------------------------------------------------
@@ -53,36 +50,13 @@
     --            AUXILIAR PROCEDURES FOR EMPTY PROCEDURE                    --
     ---------------------------------------------------------------------------
 
-    -- fill the piece's variables
-    procedure init_piece (my_piece : out piece; rank : in piece_type) is
-    begin
-      my_piece.rank := rank;
-    end init_piece;
-
-    -- Calculate the rank
-    function calculate_rank (i : in integer) return piece_type is
-    begin
-      if is_corporal(i) then
-        return c;
-      elsif is_sergeant(i) then
-        return s;
-      elsif is_lieutenant(i) then
-        return l;
-      elsif is_major(i) then
-        return m;
-      else
-        return g;
-      end if;
-    end calculate_rank;
-
     -- Init the array of pieces
     procedure init_pieces (set : out array_of_pieces) is
-      rank : piece_type;
+      rank : character;
     begin
       for index in index_of_pieces loop
-        --put(item => index_of_pieces'pos(index));
         rank := calculate_rank(index_of_pieces'pos(index));
-        init_piece(set(index),rank);
+        set(index) := rank;
       end loop;
     end init_pieces;
 
@@ -103,19 +77,42 @@
     function prepare_string (c : in components; y : in y_index)
                                                       return unbounded_string is
       s : unbounded_string;
+      rank : character;
     begin
       s := to_unbounded_string(integer'image(y));
       for x in x_index loop
         if c.board(x,y) = pieces_id'first then
-          append(s, " .");
+          append(s, " ·");
         else
           --aux := integer'value(c.board(x,y));
           --s := s & integer'image(c.board(x,y));
-          append(s, integer'image(c.board(x,y)));
+          --append(s, integer'image(c.board(x,y)));
+          rank := calculate_rank(index_of_pieces'pos(c.board(x,y)));
+          append(s, " ");
+          append(s, rank);
+          --append(s, piece_type'image(rank));
         end if;
       end loop;
       return s;
     end prepare_string;
+
+    ---------------------------------------------------------------------------
+    --                        AUXILIAR FUNCTIONS                             --
+    ---------------------------------------------------------------------------
+
+    function to_number (x : in x_index) return integer is
+    begin
+      case x is
+        when 'a' => return 1;
+        when 'b' => return 2;
+        when 'c' => return 3;
+        when 'd' => return 4;
+        when 'e' => return 5;
+        when 'f' => return 6;
+        when 'g' => return 7;
+        when 'h' => return 8;
+      end case;
+    end to_number;
 
     ---------------------------------------------------------------------------
     --                PUBLIC PROCEDURES AND FUNCTIONS                        --
@@ -145,8 +142,11 @@
 
     -- Get the color based on the id of the pieces. First NUM_PIECES_PER_TEAM
     -- are white pieces and the rest of pieces are black
-    function get_color (c : in components; id : in pieces_id) return color_type is
+    function get_color (id : in pieces_id) return color_type is
     begin
+      if id = 0 then
+        raise NOT_COLOR;
+      end if;
       if pieces_id'pos(id) <= NUM_PIECES_PER_TEAM then
         return white;
       else
@@ -159,7 +159,7 @@
                                                         return territory_type is
       aux : integer;
     begin
-      aux := y_index'pos(y) - x_index'pos(x);
+      aux := y_index'pos(y) - to_number(x);
       if aux > 0 then
         return black;
       elsif aux < 0 then
@@ -192,5 +192,36 @@
       end loop;
       put_line(to_string(x_help_line));
     end print_board;
+
+    -- Calculate the rank
+    function calculate_rank (id : in integer) return character is
+      c : character;
+    begin
+      if is_corporal(id) then
+        c := 'c';
+      elsif is_sergeant(id) then
+        c := 's';
+      elsif is_lieutenant(id) then
+        c := 'l';
+      elsif is_major(id) then
+        c := 'm';
+      else
+        c := 'g';
+      end if;
+
+      if get_color(id) = black then
+        c := to_upper(c);
+      end if;
+
+      return c;
+
+    end calculate_rank;
+
+    -- Check if the box is empty
+    function box_empty (c : in components; x : in x_index; y : in y_index)
+                                                              return boolean is
+    begin
+      return get_id_from_board(c, x, y) = 0;
+    end box_empty;
 
   end dcomponents;
