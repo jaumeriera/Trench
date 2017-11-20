@@ -8,6 +8,14 @@ Para compilar el juego:
     2) Colocarse sobre el directorio que contiene el juego.
     3) Ejecutar $ gnatmake trench.adb.
 
+Output esperado:
+    gcc-5 -c trench.adb
+    gcc-5 -c control_logic.adb
+    gcc-5 -c exceptions.ads
+    gcc-5 -c dcomponents.adb
+    gnatbind-5 -x trench.ali
+    gnatlink-5 trench.ali
+
 Para ejecutar el juego:
     1) Compilar el juego.
     2) Ejecutar en la terminal $ ./trench

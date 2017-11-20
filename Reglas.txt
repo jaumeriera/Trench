@@ -1,0 +1,84 @@
+Bienvenido a trench. Trench es un juego de estrategia al estilo ajedrez, con
+diferencias en las mecánicas de juego. Que consiste en capturar las piezas del
+oponente.
+
+EL TABLERO:
+
+El campo de juego es un tablero típico del ajedrez, de 8 por 8 donde el eje
+'x' se describe como letras de la 'a' a la 'h' y el eje 'y' se representa con
+números del 1 al 8.
+
+Una trinchera cruza el tablero por la diagonal, es decir las casillas cuya 'x' e
+'y' sean la misma. Ejemplo 'a1', 'c3', 'h8' son trincheras.
+
+LAS PIEZAS:
+
+Los nombres de las piezas se corresponden a los nombres, en inglés, de diferentes
+rangos militares. Cada pieza según su rango tiene permitido una serie de movimientos.
+
+                                  PIEZAS NEGRAS
+
+       nombre                   Alcance                      Direcciones      Puntos
+
+                                                                  |
+        'C'               se desplaza 1 casilla                -- C --          1
+                                                                  |
+
+                                                                  | /
+        'S'           se desplaza 2 hasta casillas             -- S --          2
+                                                                  |
+
+                                                                  | /
+        'L'           se desplaza 3 hasta casillas             -- L --          3
+                                                                / |
+
+                                                                \ | /
+        'M'           se desplaza hasta 4 casillas             -- M --          4
+                                                                  | \
+
+                                                                \ | /
+        'G'           se desplaza hasta 5 casillas             -- G --          5
+                                                                / | \
+
+                                  PIEZAS BLANCAS
+
+       nombre                   Alcance                      Direcciones      Puntos
+
+                                                                  |
+        'c'               se desplaza 1 casilla                -- c --          1
+                                                                  |
+
+                                                                  |
+        's'           se desplaza 2 hasta casillas             -- s --          2
+                                                                / |
+
+                                                                  | /
+        'l'           se desplaza 3 hasta casillas             -- l --          3
+                                                                / |
+
+                                                                \ |
+        'm'           se desplaza hasta 4 casillas             -- m --          4
+                                                                / | \
+
+                                                                \ | /
+        'g'           se desplaza hasta 5 casillas             -- g --          5
+                                                                / | \
+
+CAPTURAR PIEZAS:
+
+Para capturar una pieza basta con ocupar la casilla de la ficha objetivo, para ello
+mover la pieza según el patrón de la pieza, las piezas no pueden saltar a otras
+así que si hay una pieza bloqueando el camino no podrá capturar la otra pieza.
+
+Si el objetivo está en una trinchera la ficha ofensiva no podrá atacarle de frente
+deberá atacarle desde la parte de detrás, cruzar la trinchera y atacar.
+
+Si la ficha ofensiva esta en una trinchera, puede recorrer todas las casillas
+que permita su alcance y capturará todas las piezas en su recorrido, no puede
+capturar fichas propias así que en caso de que en el recorrido se encuentre una
+de sus fichas no podrá continuar su camino.
+
+FIN DEL JUEGO:
+
+El juego termina cuando uno de los dos jugadores tiene 25 puntos en piezas
+capturadas al rival.
