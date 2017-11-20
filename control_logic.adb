@@ -1033,7 +1033,7 @@ package body control_logic is
     if x_diference > 0 and then y_diference > 0 then return diagonal_U_L; end if;
     if x_diference > 0 and then y_diference < 0 then return diagonal_D_L; end if;
     if x_diference < 0 and then y_diference > 0 then return diagonal_U_R; end if;
-  if x_diference < 0 and then y_diference < 0 then return diagonal_D_R; end if;
+    if x_diference < 0 and then y_diference < 0 then return diagonal_D_R; end if;
     if x_diference = 0 and then y_diference = 0 then raise NO_DIRECTION; return up; end if;
 
     return up;
