@@ -1,0 +1,32 @@
+V "GNAT Lib v5"
+P ZX
+
+RN
+RV NO_ELABORATION_CODE
+
+U exceptions%s		exceptions.ads		4879e43d EE OO PK IL
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D exceptions.ads	20171119184907 4879e43d exceptions%s
+D system.ads		20141031112219 1d274481 system%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+X 3 exceptions.ads
+1K9*exceptions 27l5 27e15
+3X3*INCORRECT_LENGTH
+5X3*PIECE_NOT_MOVED
+7X3*INCORRECT_MOVEMENT
+9X3*INCORRECT_PIECE
+11X3*CANT_CHECK_OWNER
+13X3*NOT_COLOR
+15X3*OBJECTIVE_IN_TRENCH
+17X3*OBJECTIVE_INVALID
+19X3*PATH_BLOCKED
+21X3*UNRECHABLE_BOX
+23X3*CANT_KILL
+25X3*NO_DIRECTION
+

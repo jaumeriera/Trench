@@ -1,0 +1,149 @@
+V "GNAT Lib v5"
+M P W=b
+P SS ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U trench%b		trench.adb		66712e33 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.unbounded_io%s  a-tiunio.ads	a-tiunio.ali
+W control_logic%s	control_logic.adb	control_logic.ali
+W exceptions%s		exceptions.ads		exceptions.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-charac.ads		20070912115821 2d3ec45b ada.characters%s
+D a-chahan.ads		20140611123156 1601a50f ada.characters.handling%s
+D a-chlat1.ads		20140225151544 66457d31 ada.characters.latin_1%s
+D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
+D a-finali.ads		20140611123707 69f99942 ada.finalization%s
+D a-inteio.ads		20070406091342 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-string.ads		20070406091342 90ac6797 ada.strings%s
+D a-strmap.ads		20140611123156 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20140717072738 3f91d4c5 ada.strings.unbounded%s
+D a-suteio.ads		20090409150019 26d8e9aa ada.strings.unbounded.text_io%s
+D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-tiinio.ads		20140717063513 aa04e5d6 ada.text_io.integer_io%s
+D a-tiunio.ads		20070406091342 759c6b0c ada.text_io.unbounded_io%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D control_logic.ads	20171119200753 fc092afe control_logic%s
+D dcomponents.ads	20171119184907 cbe5de9e dcomponents%s
+D exceptions.ads	20171119184907 4879e43d exceptions%s
+D interfac.ads		20141120112812 6033a23f interfaces%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
+D system.ads		20141031112219 1d274481 system%s
+D s-atocou.ads		20141017084241 cd7c94ca system.atomic_counters%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
+D s-finmas.ads		20140225151139 814daec4 system.finalization_masters%s
+D s-finroo.ads		20120426095924 4ff27390 system.finalization_root%s
+D s-memory.ads		20140225151139 597d6634 system.memory%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-secsta.ads		20140225151139 86a2856d system.secondary_stack%s
+D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+D s-stalib.adb		20140225151139 f2fe2716 system.standard_library%b
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20131010103753 b16154c2 system.storage_pools%s
+D s-stposu.ads		20140718101241 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20131014135145 aedef97e system.stream_attributes%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+D trench.adb		20171120095601 a061aaed trench%b
+X 1 ada.ads
+16K9*Ada 19e8 45|2r6 2r23 3r6 3r33 4r6 4r36
+X 10 a-string.ads
+16K13*Strings 35e16 45|3r10 3r37
+X 12 a-strunb.ads
+76K21*Unbounded 489e26 45|3w18 3r45
+79R9*Unbounded_String<6|43R9> 473e14 45|40r14 55r14 105r10
+84V13*Length{natural} 45|45s21 59s8
+139V13*Element{character} 45|46s32 60s17
+X 15 a-textio.ads
+49K13*Text_IO 471e16 45|2w10 2r27 4r10 4r40
+52P9*File_Type 45|104r16
+53n23*In_File{53E9} 45|115r43
+92U14*Open 45|115s9
+93p7 File{52P9} 45|115r15
+94e7 Mode{53E9} 45|115r35
+95a7 Name{string} 45|115r52
+98U14*Close 45|120s9
+183V13*End_Of_File{boolean} 45|116s19
+242U14*Put 45|15s5 21s5 31s5
+263U14*Put_Line 45|27s5 28s5 29s5 30s5 86s7 88s7 90s7 92s7 114s9 121s9 125s11
+. 132s11 137s9 138s9
+X 17 a-tiunio.ads
+25K21*Unbounded_IO 61e29 45|4w18 4r48
+41U14*Put_Line=43:42 45|118s11
+45V13*Get_Line=47:42{12|79R9} 45|117s19
+49V13*Get_Line=50:42{12|79R9} 45|42s15 57s15
+X 19 control_logic.ads
+7K9*control_logic 80e18 45|1w6 1r25
+9R8*trench_game 78e16 45|68r39 99r10
+17U13*prepare_game 45|107s3
+21U13*move_piece 45|78s7
+25U13*print_game_state 45|126s11
+28U13*next_turn 45|80s7
+31V12*game_not_finished{boolean} 45|124s15
+34V12*is_owner_of_piece{boolean} 45|72s12
+39V12*movement_is_correct{boolean} 45|76s8
+44U13*puntuate_and_clean 45|77s7
+X 21 exceptions.ads
+1K9*exceptions 27e15 45|5w6 5r22
+5X3*PIECE_NOT_MOVED 45|91r10
+7X3*INCORRECT_MOVEMENT 45|82r13 89r10
+9X3*INCORRECT_PIECE 45|73r13 87r10
+11X3*CANT_CHECK_OWNER 45|85r10
+X 24 system.ads
+67M9*Address
+X 31 s-memory.ads
+53V13*Alloc{24|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{24|67M9} 105i<c,__gnat_realloc>22
+X 37 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+X 45 trench.adb
+6U11*trench 6b11 141l5 141t11
+13U13 ask_origin_coordinate 13b13 16l7 16t28 127s11
+19U13 ask_destination_coordinate 19b13 22l7 22t33 129s11
+25U13 print_menu 25b13 32l7 32t17 109s5
+39U13 get_coordinate 39b13 39<29 51l7 51t21 128s11 130s11
+39a29 coordinate{string} 44r18 44r36 46m11 48m11
+40r5 buffer{12|79R9} 42m5 45r28 46r40
+44i9 index{integer} 45r12 46r22 46r48 48r22
+54U13 get_option 54b13 54<25 64l7 64t17 110s5
+54e25 option{character} 60m7 62m7
+55r5 buffer{12|79R9} 57m5 59r15 60r25
+68U13 do_actions 68b13 68=25 68=52 69=49 93l7 93t17 131s11
+68r25 game{19|9R8} 72r30 76r28 77m26 78m18 80m17
+68a52 origin{string} 72r36 76m34 76r34 77r32 78r24
+69a49 destination{string} 76r42 77r40 78r32
+99r3 game{19|9R8} 107m16 124r33 126r28 131m22 131r22
+100a3 origin{string} 128m26 131m28 131r28
+101a3 destination{string} 130m26 131m36 131r36
+102e3 option{character} 110m16 111r10
+103b3 salir{boolean} 108r13 135m9
+104p3 rules_file{15|52P9} 115m23 115r23 116r31 117r28 120m15 120r15
+105r3 line{12|79R9} 117m11 118r20
+
